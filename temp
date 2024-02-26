@@ -1,5 +1,5 @@
 #include<stdio.h>
-// #include<conio.h>
+#include<conio.h>
 #include<ctype.h>
 
 char stk[100];
@@ -26,6 +26,7 @@ int main() {
     printf("Enter the infix expression:\n");
     scanf("%s", infix);
     push('#');
+
     for (i = 0; infix[i] != '\0'; i++) {
         if (infix[i] == '(')
             push('(');
@@ -51,6 +52,8 @@ int main() {
     postfix[j] = '\0';
 
     printf("\nInfix expression: %s\n", infix);
-    printf("Postfix expression: %s\n",postfix);
+    printf("Postfix expression: %s\n", postfix);
 
+    getch();
+    return 0;
 }
